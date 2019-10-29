@@ -1,16 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+
 import StartMenu from './StartMenu';
+import GameScreen from './GameScreen';
 
-const App = () => {
-  return (
-    <View style={styles.container}>
-      <StartMenu />      
-    </View>
-  );
+const MainNavigator = createSwitchNavigator({
+  Home: StartMenu,
+  Game: GameScreen,
+})
+
+const AppContainer = createAppContainer(MainNavigator);
+
+export default class App extends React.Component{
+  render(){
+    return(
+      <View style={styles.container}>
+        <AppContainer />
+      </View>
+    )
+  }
 }
-
-export default App;
 
 const styles = StyleSheet.create({
   container: {

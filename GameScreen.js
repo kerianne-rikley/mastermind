@@ -1,17 +1,13 @@
 import * as React from 'react';
 import { StyleSheet, View, Text, Button, Alert } from 'react-native';
 
-export default class StartMenu extends React.Component{
+export default class GameScreen extends React.Component{
     render(){
-        const {navigate}=this.props.navigation;
         return (
             <View style={styles.container}>
-                <Text style={styles.titleCard}>
-                    Mastermind
-                </Text>
                 <Button
-                    title="Start Game"
-                    onPress={() => this.props.navigation.navigate('Game')}
+                    title="Home"
+                    onPress={() => this.props.navigation.navigate('Home')}
                 />
             </View>
         )
@@ -28,6 +24,7 @@ const styles = StyleSheet.create({
     titleCard: {
         fontSize: 30,
         fontWeight: 'bold',
-    }
+        marginVertical: 10,
+    },
 });
   
