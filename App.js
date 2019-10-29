@@ -5,7 +5,7 @@ import StartMenu from './StartMenu';
 const App = () => {
   return (
     <View style={styles.container}>
-      <StartMenu />
+      <StartMenu />      
     </View>
   );
 }

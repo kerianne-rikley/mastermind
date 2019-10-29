@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Stylesheet, View, Text, Button, Alert } from 'react-native';
+import { StyleSheet, View, Text, Button, Alert } from 'react-native';
 
 export default class StartMenu extends React.Component{
     render(){
