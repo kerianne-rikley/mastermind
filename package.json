@@ -10,7 +10,7 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "collectCoverage": false,
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/coverage/**",
