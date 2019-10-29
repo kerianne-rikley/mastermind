@@ -7,11 +7,20 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test": "jest --coverage",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "lint": "eslint *.js **/*.js",
+    "prettier": "prettier **/*.js --write"
   },
   "jest": {
     "preset": "jest-expo",
     "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/coverage/**",
+      "!**/node_modules/**",
+      "!**/babel.config.js",
+      "!**/jest.setup.js"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 50,
@@ -19,19 +28,19 @@
         "lines": 80,
         "statements": 66
       }
-    },
-    "collectCoverageFrom": [
-      "**/*.{js,jsx}",
-      "!**/coverage/**",
-      "!**/node_modules/**",
-      "!**/babel.config.js",
-      "!**/jest.setup.js"
-    ]
+    }
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run test && lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint",
+      "pretty-quick — staged",
+      "git add"
+    ]
   },
   "dependencies": {
     "expo": "^35.0.0",
@@ -46,9 +55,18 @@
   "devDependencies": {
     "@testing-library/react": "^9.3.0",
     "@testing-library/react-native": "^4.1.0",
+    "babel-eslint": "^10.0.3",
     "babel-preset-expo": "^7.1.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
     "husky": "^3.0.9",
     "jest-expo": "^35.0.0",
+    "prettier": "^1.18.2",
     "react-native-testing-library": "^1.11.1",
     "react-test-renderer": "16.8.3"
   },
