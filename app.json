@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "sample_project",
-    "slug": "AwesomeProject",
+    "name": "mastermind",
+    "slug": "mastermind",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
