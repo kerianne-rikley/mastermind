@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, View, Text, Button, Alert } from 'react-native';
 
-export default class StartMenu extends React.Component{
+export default class StartScreen extends React.Component{
     render(){
         const {navigate}=this.props.navigation;
         return (
