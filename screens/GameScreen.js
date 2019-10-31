@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { StyleSheet, View, Text, Button, Alert } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
 
 export default class GameScreen extends React.Component{
     render(){
         return (
             <View style={styles.container}>
                 <Button
+                    testID="home-button"
                     title="Home"
                     onPress={() => this.props.navigation.navigate('Home')}
                 />
