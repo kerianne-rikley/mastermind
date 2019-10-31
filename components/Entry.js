@@ -1,16 +1,21 @@
 import * as React from 'react';
-import { StyleSheet, View, Text, Button, Alert } from 'react-native';
-import Entry  from '../components/Entry';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
-export default class GameScreen extends React.Component{
+export default class Entry extends React.Component{
+    state = {value: 0};
+
+    updateState = () => {
+        this.setState({value: (this.state.value+1)%6})
+    }
+
     render(){
         return (
             <View style={styles.container}>
-                <Entry />
                 <Button
-                    title="Home"
-                    onPress={() => this.props.navigation.navigate('Home')}
+                    title='test'//{this.state}
+                    onPress = {() => {this.updateState()}}
                 />
+                <Text>{this.state.value}</Text>
             </View>
         )
     }
@@ -29,4 +34,3 @@ const styles = StyleSheet.create({
         marginVertical: 10,
     },
 });
-  
