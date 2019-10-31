@@ -2,11 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
-import StartScreen from './screens/StartScreen';
+import HomeScreen from './screens/HomeScreen';
 import GameScreen from './screens/GameScreen';
 
 const MainNavigator = createSwitchNavigator({
-  Home: StartScreen,
+  Home: HomeScreen,
   Game: GameScreen,
 })
 

@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { StyleSheet, View, Text, Button, Alert } from 'react-native';
 
-export default class StartScreen extends React.Component{
+export default class HomeScreen extends React.Component{
     render(){
-        const {navigate}=this.props.navigation;
         return (
             <View style={styles.container}>
                 <Text style={styles.titleCard}>
                     Mastermind
                 </Text>
                 <Button
+                    testID="start-button"
                     title="Start Game"
                     onPress={() => this.props.navigation.navigate('Game')}
                 />

@@ -1,6 +1,6 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-import { fireEvent, render, wait } from '@testing-library/react-native';
+import { fireEvent, render } from '@testing-library/react-native';
 
 import GameScreen from '../GameScreen';
 

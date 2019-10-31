@@ -47,6 +47,7 @@ exports[`<App /> renders correctly 1`] = `
           "opacity": 1,
         }
       }
+      testID="start-button"
     >
       <View
         style={
