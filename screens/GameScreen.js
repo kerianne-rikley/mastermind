@@ -7,7 +7,9 @@ export default class GameScreen extends React.Component{
     render(){
         return (
             <View style={styles.container}>
-                <Entry />
+                <View style={styles.code}>
+                    <Entry /><Entry /><Entry /><Entry />
+                </View>
                 <Button
                     testID="home-button"
                     title="Home"
@@ -30,5 +32,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginVertical: 10,
     },
+    code: {
+        flex: 1,
+        flexDirection: 'row'
+
+    }
 });
   
