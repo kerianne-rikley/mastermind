@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { StyleSheet, View, Text, Button, Alert } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
 import Entry  from '../components/Entry';
+
 
 export default class GameScreen extends React.Component{
     render(){
@@ -8,6 +9,7 @@ export default class GameScreen extends React.Component{
             <View style={styles.container}>
                 <Entry />
                 <Button
+                    testID="home-button"
                     title="Home"
                     onPress={() => this.props.navigation.navigate('Home')}
                 />
