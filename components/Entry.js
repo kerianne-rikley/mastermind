@@ -17,7 +17,7 @@ export default class Entry extends React.Component {
   }
 
   updateState = () => {
-    this.setState(prevState => ({ value: (prevState + 1) % 6 }));
+    this.setState(prevState => ({ value: (prevState.value + 1) % 6 }));
   };
 
   render() {
