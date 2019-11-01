@@ -6,11 +6,20 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest --watch"
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll"
   },
   "jest": {
     "preset": "jest-expo",
     "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 50,
+        "lines": 80,
+        "statements": 66
+      }
+    },
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/coverage/**",
@@ -18,6 +27,11 @@
       "!**/babel.config.js",
       "!**/jest.setup.js"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
   },
   "dependencies": {
     "expo": "^35.0.0",
@@ -33,6 +47,7 @@
     "@testing-library/react": "^9.3.0",
     "@testing-library/react-native": "^4.1.0",
     "babel-preset-expo": "^7.1.0",
+    "husky": "^3.0.9",
     "jest-expo": "^35.0.0",
     "react-native-testing-library": "^1.11.1",
     "react-test-renderer": "16.8.3"
