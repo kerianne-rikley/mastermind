@@ -1,0 +1,4 @@
+# This file lists all the files that lint will ignore
+
+/node_modules/*
+babel.config.js
