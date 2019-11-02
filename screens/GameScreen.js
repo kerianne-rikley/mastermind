@@ -7,10 +7,10 @@ export default class GameScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.code}>
-          <Entry />
-          <Entry />
-          <Entry />
-          <Entry />
+          <Entry id={0} />
+          <Entry id={1} />
+          <Entry id={2} />
+          <Entry id={3} />
         </View>
         <Button
           testID="home-button"

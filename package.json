@@ -6,8 +6,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest --coverage",
-    "test:watch": "jest --watchAll",
+    "test": "jest --watch",
+    "test:cover": "jest --coverage",
     "lint": "eslint *.js **/*.js",
     "lint:fix": "eslint */**.js --fix",
     "prettier": "prettier **/*.js --write"
@@ -29,11 +29,12 @@
         "lines": 80,
         "statements": 66
       }
-    }
+    },
+    "setupFilesAfterEnv": ["<rootDir>/jestSetup.js"]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test && lint-staged"
+      "pre-commit": "npm run test:cover && lint-staged"
     }
   },
   "lint-staged": {
@@ -45,6 +46,7 @@
   },
   "dependencies": {
     "expo": "^35.0.0",
+    "prop-types": "^15.7.2",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
@@ -58,6 +60,8 @@
     "@testing-library/react-native": "^4.1.0",
     "babel-eslint": "^10.0.3",
     "babel-preset-expo": "^7.1.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.5.0",
@@ -67,6 +71,7 @@
     "eslint-plugin-react": "^7.16.0",
     "husky": "^3.0.9",
     "jest-expo": "^35.0.0",
+    "jest-styled-components": "^6.3.3",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
     "react-native-testing-library": "^1.11.1",

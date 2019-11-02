@@ -1,4 +1,5 @@
 import * as React from "react";
+import PropTypes from "prop-types";
 import { StyleSheet, View, Button } from "react-native";
 
 const colourMap = {
@@ -25,6 +26,7 @@ export default class Entry extends React.Component {
     return (
       <View style={styles.container}>
         <Button
+          id={`entry-button-${this.props.id}`}
           title={stateValueString}
           color={colourMap[this.state.value]}
           onPress={() => {
@@ -35,6 +37,10 @@ export default class Entry extends React.Component {
     );
   }
 }
+
+React.propTypes = {
+  id: PropTypes.number.isRequired
+};
 
 const styles = StyleSheet.create({
   container: {
