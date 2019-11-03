@@ -12,25 +12,24 @@ const colourMap = {
 };
 
 export default class Entry extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: 0 };
-  }
+  // // constructor(props) {
+  // //   super(props);
+  // //   this.state = { value: 0 };
+  // // }
 
-  updateState = () => {
-    this.setState(prevState => ({ value: (prevState.value + 1) % 6 }));
-  };
+  // updateState = () => {
+  //   this.setState(prevState => ({ value: (prevState.value + 1) % 6 }));
+  // };
 
   render() {
-    const stateValueString = this.state.value.toString();
     return (
       <View style={styles.container}>
         <Button
           id={`entry-button-${this.props.id}`}
-          title={stateValueString}
-          color={colourMap[this.state.value]}
+          title={this.props.choice}
+          color={colourMap[this.props.choice]}
           onPress={() => {
-            this.updateState();
+            this.props.handlePress(this.props.id)
           }}
         />
       </View>
