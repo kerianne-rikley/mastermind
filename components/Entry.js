@@ -11,10 +11,11 @@ export default class Entry extends React.Component{
     }
 
     render(){
+        let stateValueString = this.state.value.toString();
         return (
             <View style={styles.container}>
                 <Button
-                    title={this.state.value}
+                    title={stateValueString}
                     color = {colourMap[this.state.value]}
                     onPress = {() => {this.updateState()}}
                 />
