@@ -18,7 +18,9 @@ export default class GameScreen extends React.Component {
   }
 
   updateHistory = () => {
-    this.setState({codeHistory: [this.state.currentChoices]})
+    let lastAttempt = [...this.state.currentChoices]
+    this.state.codeHistory.push(lastAttempt)
+    this.setState({currentChoices: [0,0,0,0]});
   }
 
   render() {
