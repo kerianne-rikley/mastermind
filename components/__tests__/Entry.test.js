@@ -22,7 +22,7 @@ describe("<Entry />", () => {
     let entryButton;
 
     const fakeId = 0;
-    const fakeChoice = 3;
+    const fakeChoice = "3";
 
     beforeAll(() => {
       wrapper = shallow(

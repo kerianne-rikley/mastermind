@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     padding: '20'
   },
   history: {
-    flexDirection: 'col',
+    flexDirection: 'column',
     justifyContent: 'space-around',
     padding: '20'
   }
