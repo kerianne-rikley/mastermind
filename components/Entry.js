@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, View, Button } from "react-native";
 
-const colourMap = {
+const colorMap = {
   0: "#1e90ff",
   1: "#ee82ee",
   2: "#dc143c",
@@ -27,7 +27,7 @@ export default class Entry extends React.Component {
         <Button
           id={`entry-button-${this.props.id}`}
           title={this.props.choice}
-          color={colourMap[this.props.choice]}
+          color={colorMap[this.props.choice]}
           onPress={() => {
             this.props.handlePress(this.props.id)
           }}
