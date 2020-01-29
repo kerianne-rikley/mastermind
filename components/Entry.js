@@ -12,7 +12,6 @@ const colorMap = {
 };
 
 export default class Entry extends React.Component {
-
   render() {
     return (
       <View style={styles.container}>
