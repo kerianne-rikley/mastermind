@@ -12,15 +12,6 @@ const colourMap = {
 };
 
 export default class Entry extends React.Component {
-  // // constructor(props) {
-  // //   super(props);
-  // //   this.state = { value: 0 };
-  // // }
-
-  // updateState = () => {
-  //   this.setState(prevState => ({ value: (prevState.value + 1) % 6 }));
-  // };
-
   render() {
     return (
       <View style={styles.container}>
