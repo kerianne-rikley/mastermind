@@ -1,5 +1,10 @@
 import * as React from "react";
+<<<<<<< HEAD
 import { StyleSheet, View } from "react-native";
+=======
+import PropTypes from "prop-types";
+import { StyleSheet, View, Button, Text } from "react-native";
+>>>>>>> 62f8b6318203c5c11430e6f93cb7e89e401810f6
 
 const colourMap = {
   0: "#1e90ff",

@@ -5,9 +5,13 @@ import { shallow } from "enzyme";
 import Entry from "../Entry";
 
 describe("<Entry />", () => {
+
+  const handlePressMock = jest.fn(); // Just an empty function
+
   it("renders correctly", () => {
-    const tree = TestRenderer.create(<Entry />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const renderedEntry = TestRenderer.create(
+      <Entry id={0} choice="0" handlePress={handlePressMock} />).toJSON();
+    expect(renderedEntry).toMatchSnapshot();
   });
 
   describe("entry button", () => {
@@ -17,16 +21,42 @@ describe("<Entry />", () => {
     let wrapper;
     let entryButton;
 
+    const fakeId = 0;
+    const fakeChoice = "3";
+
     beforeAll(() => {
-      wrapper = shallow(<Entry id={0} />);
+      wrapper = shallow(
+        <Entry id={fakeId} handlePress={handlePressMock} choice={fakeChoice} />);
+    });
+
+    afterEach(() => {
+      jest.clearAllMocks();
     });
 
     it("exists", () => {
-      entryButton = wrapper.find("#entry-button-0").getElement();
-      expect(entryButton).toBeDefined();
+      entryButton = wrapper.find(`#entry-button-${fakeId}`).getElement();
+      expect(entryButton).toBeTruthy();
     });
 
-    it("toggles through the options when clicked", () => {
+    it("executes the handlePress function when clicked", () => {
+      entryButton = wrapper.find(`#entry-button-${fakeId}`).getElement();
+      entryButton.props.onPress();
+      expect(handlePressMock).toHaveBeenCalledTimes(1);
+      // Check the arguments passed to mock function 
+      expect(handlePressMock).toHaveBeenCalledWith(fakeId); 
+    });
+
+    it("displays the choice as a title", () => {
+      entryButton = wrapper.find(`#entry-button-${fakeId}`).getElement();
+      expect(entryButton.props.title).toEqual(fakeChoice);
+    });
+
+    it("displays the choice color", () => {
+      entryButton = wrapper.find(`#entry-button-${fakeId}`).getElement();
+      expect(entryButton.props.color).toEqual("#ff8c00");
+    });
+
+    describe("displays choice color", () => {
       const colors = [
         "#1e90ff",
         "#ee82ee",
@@ -35,10 +65,14 @@ describe("<Entry />", () => {
         "#ffd700",
         "#228b22"
       ];
-      colors.forEach(color => {
-        entryButton = wrapper.find("#entry-button-0").getElement();
-        expect(entryButton.props.color).toEqual(color);
-        entryButton.props.onPress();
+
+      colors.forEach((color, index) => {
+        it(`displays ${color} for ${index}`, () => {
+          wrapper = shallow(
+            <Entry id={fakeId} choice={index} />);  
+          entryButton = wrapper.find(`#entry-button-${fakeId}`).getElement();
+          expect(entryButton.props.color).toEqual(color);
+        });
       });
     });
   });

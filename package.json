@@ -22,7 +22,9 @@
       "!**/babel.config.js",
       "!**/jest.setup.js"
     ],
-    "setupFilesAfterEnv": ["<rootDir>/jestSetup.js"]
+    "setupFilesAfterEnv": [
+      "<rootDir>/jestSetup.js"
+    ]
   },
   "husky": {
     "hooks": {
