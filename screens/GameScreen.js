@@ -35,7 +35,7 @@ export default class GameScreen extends React.Component {
     let iAttempts = 0
     let iSolution = 0
 
-    for(let index = 0; index < lastAttempt.length; index+=1){ // Find and record 'perfect match' (red)
+    for(let index = 0; index < 4; index+=1){ // Find and record 'perfect match' (red)
       if (lastAttempt[index] === sol[index]){
         feedback.push(2);
       } else {
@@ -72,17 +72,21 @@ export default class GameScreen extends React.Component {
   }
 
   resetGame = () => {
+    const newSolution = []
+
+    for(let index = 0; index < 4; index+=1) {
+      newSolution.push(Math.floor(Math.random() * 6))
+    }
+
     this.setState({
       codeHistory: [[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6]],
       codeFeedback: [[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6],[6,6,6,6]],
       currentChoices: [0,0,0,0],
-      solution: [1,2,3,3],
+      solution: [...newSolution],
       attempts: 0,
       isDisabled: false
     })
   }
-  
-
   
   render() {
     return (
@@ -124,8 +128,8 @@ export default class GameScreen extends React.Component {
           <Attempt code={this.state.codeHistory[8]} feedback={this.state.codeFeedback[8]} />
           <View style={styles.spacer} />
           <Attempt code={this.state.codeHistory[9]} feedback={this.state.codeFeedback[9]} />
-          <Text>{this.state.attempts}</Text>
-          <View style={styles.code}>
+          <Text>{this.state.solution}</Text>
+          <View style={styles.code}>  
             <Button testID="home-button" title="Home" onPress={() => this.props.navigation.navigate("Home")} />
             <View style={styles.spacer3} />
             <View style={styles.spacer3} />
