@@ -25,15 +25,24 @@ export default class Attempt extends React.Component {
     let r4 = colourMap[this.props.feedback[3]];
 
     return (
-      <View style={styles.container}>
+      <View style={styles.code}>
         <View style={styles.code}>
           <View style={{width: 20, height: 20, padding: 2, backgroundColor: c1 }} />
+          <View style={styles.spacer} />
           <View style={{width: 20, height: 20, padding: 2, backgroundColor: c2 }} />
+          <View style={styles.spacer} />
           <View style={{width: 20, height: 20, padding: 2, backgroundColor: c3 }} />
+          <View style={styles.spacer} />
           <View style={{width: 20, height: 20, padding: 2, backgroundColor: c4 }} />
+        </View>
+        <View style={{width: 6}} />
+        <View style={styles.code}>
           <View style={{width: 20, height: 20, padding: 2, backgroundColor: r1 }} />
+          <View style={styles.spacer} />
           <View style={{width: 20, height: 20, padding: 2, backgroundColor: r2 }} />
+          <View style={styles.spacer} />
           <View style={{width: 20, height: 20, padding: 2, backgroundColor: r3 }} />
+          <View style={styles.spacer} />
           <View style={{width: 20, height: 20, padding: 2, backgroundColor: r4 }} />
         </View>
       </View>
@@ -56,6 +65,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: '20'
-  }   
+  },
+  spacer: {
+    width: 3
+  }
 
 });
