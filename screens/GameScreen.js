@@ -35,18 +35,18 @@ export default class GameScreen extends React.Component {
     let iAttempts = 0
     let iSolution = 0
 
-    for(let index = 0; index < 4; index+=1){ // Find and record 'perfect match' (red)
-      if (lastAttempt[index] !== sol[index]){
+    for(let index = 0; index < lastAttempt.length; index+=1){ // Find and record 'perfect match' (red)
+      if (lastAttempt[index] === sol[index]){
+        feedback.push(2);
+      } else {
         idxA.push(lastAttempt[index]);
         idxS.push(sol[index]);
-      } else {
-        feedback.push(2);
       }
     }
 
     while(iAttempts < idxA.length){ // Find and record 'partial match' (white)
       while(iSolution < idxS.length){
-        if (lastAttempt[idxA[iAttempts]] === sol[idxS[iSolution]]){
+        if (idxA[iAttempts] === idxS[iSolution]){
           feedback.push(0)
           idxS.splice(iSolution,1)
           iSolution=5
