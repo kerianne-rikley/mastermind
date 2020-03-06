@@ -25,8 +25,9 @@ exports[`<GameScreen /> renders correctly 1`] = `
       style={
         Object {
           "flexDirection": "row",
-          "justifyContent": "space-around",
-          "padding": "20",
+          "justifyContent": "space-between",
+          "marginLeft": 1,
+          "marginRight": 1,
         }
       }
     >
@@ -87,57 +88,10 @@ exports[`<GameScreen /> renders correctly 1`] = `
       <View
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "flex": 1,
-            "justifyContent": "center",
+            "width": 2,
           }
         }
-      >
-        <View
-          accessibilityRole="button"
-          accessibilityStates={Array []}
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <View
-            style={
-              Array [
-                Object {},
-              ]
-            }
-          >
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#007AFF",
-                    "fontSize": 18,
-                    "padding": 8,
-                    "textAlign": "center",
-                  },
-                  Object {
-                    "color": "#1e90ff",
-                  },
-                ]
-              }
-            >
-              0
-            </Text>
-          </View>
-        </View>
-      </View>
+      />
       <View
         style={
           Object {
@@ -195,6 +149,13 @@ exports[`<GameScreen /> renders correctly 1`] = `
       <View
         style={
           Object {
+            "width": 2,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flex": 1,
@@ -246,6 +207,74 @@ exports[`<GameScreen /> renders correctly 1`] = `
           </View>
         </View>
       </View>
+      <View
+        style={
+          Object {
+            "width": 2,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          accessibilityRole="button"
+          accessibilityStates={Array []}
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {},
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#007AFF",
+                    "fontSize": 18,
+                    "padding": 8,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "color": "#1e90ff",
+                  },
+                ]
+              }
+            >
+              0
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "width": 18,
+          }
+        }
+      />
       <View
         accessibilityRole="button"
         accessibilityStates={Array []}
@@ -272,6 +301,7 @@ exports[`<GameScreen /> renders correctly 1`] = `
           }
         >
           <Text
+            disabled={false}
             style={
               Array [
                 Object {
@@ -291,7 +321,14 @@ exports[`<GameScreen /> renders correctly 1`] = `
     <View
       style={
         Object {
-          "flexDirection": "column",
+          "height": 2,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
           "justifyContent": "space-around",
           "padding": "20",
         }
@@ -300,410 +337,1839 @@ exports[`<GameScreen /> renders correctly 1`] = `
       <View
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "flex": 1,
-            "justifyContent": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
           }
         }
       >
         <View
+          id="history-0"
           style={
             Object {
-              "flexDirection": "row",
-              "justifyContent": "space-around",
-              "padding": "20",
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
             }
           }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
+          }
+        />
+        <View
+          id="history-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
+          }
+        />
+        <View
+          id="history-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
             }
-          />
-        </View>
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
       </View>
       <View
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "flex": 1,
-            "justifyContent": "center",
+            "width": 6,
           }
         }
-      >
-        <View
-          style={
-            Object {
-              "flexDirection": "row",
-              "justifyContent": "space-around",
-              "padding": "20",
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-        </View>
-      </View>
+      />
       <View
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "flex": 1,
-            "justifyContent": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
           }
         }
       >
         <View
+          id="feedback-0"
           style={
             Object {
-              "flexDirection": "row",
-              "justifyContent": "space-around",
-              "padding": "20",
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
             }
           }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
+        />
         <View
           style={
             Object {
-              "flexDirection": "row",
-              "justifyContent": "space-around",
-              "padding": "20",
+              "width": 3,
             }
           }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
+        />
+        <View
+          id="feedback-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "flex": 1,
-            "justifyContent": "center",
           }
-        }
-      >
+        />
         <View
           style={
             Object {
-              "flexDirection": "row",
-              "justifyContent": "space-around",
-              "padding": "20",
+              "width": 3,
             }
           }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
+        />
+        <View
+          id="feedback-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "flex": 1,
-            "justifyContent": "center",
           }
-        }
-      >
+        />
         <View
           style={
             Object {
-              "flexDirection": "row",
-              "justifyContent": "space-around",
-              "padding": "20",
+              "width": 3,
             }
           }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
+        />
+        <View
+          id="feedback-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": 20,
-                "padding": 2,
-                "width": 20,
-              }
-            }
-          />
-        </View>
+          }
+        />
       </View>
     </View>
-  </View>
-  <View
-    accessibilityRole="button"
-    accessibilityStates={Array []}
-    accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-    testID="home-button"
-  >
     <View
       style={
-        Array [
-          Object {},
-        ]
+        Object {
+          "height": 2,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "padding": "20",
+        }
       }
     >
-      <Text
+      <View
         style={
-          Array [
-            Object {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "padding": 8,
-              "textAlign": "center",
-            },
-          ]
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
         }
       >
-        Home
-      </Text>
+        <View
+          id="history-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "width": 6,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="feedback-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 2,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "padding": "20",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="history-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "width": 6,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="feedback-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 2,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "padding": "20",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="history-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "width": 6,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="feedback-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 2,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "padding": "20",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="history-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "width": 6,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="feedback-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 2,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "padding": "20",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="history-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "width": 6,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="feedback-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 2,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "padding": "20",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="history-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "width": 6,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="feedback-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 2,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "padding": "20",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="history-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "width": 6,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="feedback-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 2,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "padding": "20",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="history-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "width": 6,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="feedback-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 2,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "padding": "20",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="history-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="history-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "width": 6,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "padding": "20",
+          }
+        }
+      >
+        <View
+          id="feedback-0"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-1"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-2"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": 3,
+            }
+          }
+        />
+        <View
+          id="feedback-3"
+          style={
+            Object {
+              "backgroundColor": "black",
+              "height": 20,
+              "padding": 2,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+    </View>
+    <Text>
+      1
+      2
+      3
+      3
+    </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginLeft": 1,
+          "marginRight": 1,
+        }
+      }
+    >
+      <View
+        accessibilityRole="button"
+        accessibilityStates={Array []}
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID="home-button"
+      >
+        <View
+          style={
+            Array [
+              Object {},
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#007AFF",
+                  "fontSize": 18,
+                  "padding": 8,
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            Home
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "width": 18,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "width": 18,
+          }
+        }
+      />
+      <View
+        accessibilityRole="button"
+        accessibilityStates={Array []}
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID="reset-button"
+      >
+        <View
+          style={
+            Array [
+              Object {},
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#007AFF",
+                  "fontSize": 18,
+                  "padding": 8,
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            Reset
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
 </View>
