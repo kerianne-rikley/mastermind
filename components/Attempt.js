@@ -27,23 +27,23 @@ export default class Attempt extends React.Component {
     return (
       <View style={styles.code}>
         <View style={styles.code}>
-          <View style={{width: 20, height: 20, padding: 2, backgroundColor: c1 }} />
+          <View id="history-0" style={{width: 20, height: 20, padding: 2, backgroundColor: c1 }} />
           <View style={styles.spacer} />
-          <View style={{width: 20, height: 20, padding: 2, backgroundColor: c2 }} />
+          <View id="history-1" style={{width: 20, height: 20, padding: 2, backgroundColor: c2 }} />
           <View style={styles.spacer} />
-          <View style={{width: 20, height: 20, padding: 2, backgroundColor: c3 }} />
+          <View id="history-2" style={{width: 20, height: 20, padding: 2, backgroundColor: c3 }} />
           <View style={styles.spacer} />
-          <View style={{width: 20, height: 20, padding: 2, backgroundColor: c4 }} />
+          <View id="history-3" style={{width: 20, height: 20, padding: 2, backgroundColor: c4 }} />
         </View>
         <View style={{width: 6}} />
         <View style={styles.code}>
-          <View style={{width: 20, height: 20, padding: 2, backgroundColor: r1 }} />
+          <View id="feedback-0" style={{width: 20, height: 20, padding: 2, backgroundColor: r1 }} />
           <View style={styles.spacer} />
-          <View style={{width: 20, height: 20, padding: 2, backgroundColor: r2 }} />
+          <View id="feedback-1" style={{width: 20, height: 20, padding: 2, backgroundColor: r2 }} />
           <View style={styles.spacer} />
-          <View style={{width: 20, height: 20, padding: 2, backgroundColor: r3 }} />
+          <View id="feedback-2" style={{width: 20, height: 20, padding: 2, backgroundColor: r3 }} />
           <View style={styles.spacer} />
-          <View style={{width: 20, height: 20, padding: 2, backgroundColor: r4 }} />
+          <View id="feedback-3" style={{width: 20, height: 20, padding: 2, backgroundColor: r4 }} />
         </View>
       </View>
     );
