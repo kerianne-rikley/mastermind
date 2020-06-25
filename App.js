@@ -4,10 +4,12 @@ import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import ErrorBoundary from "./ErrorBoundary";
 import HomeScreen from "./screens/HomeScreen";
 import GameScreen from "./screens/GameScreen";
+import HowToScreen from "./screens/HowToScreen";
 
 const MainNavigator = createSwitchNavigator({
   Home: HomeScreen,
-  Game: GameScreen
+  Game: GameScreen,
+  HowTo: HowToScreen
 });
 
 const AppContainer = createAppContainer(MainNavigator);
