@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StyleSheet, View, Text, Button } from "react-native";
 
-const buttonColor = "#2F1867"
+const buttonColor = "#E70088"
 
 export default class HomeScreen extends React.Component {
   render() {

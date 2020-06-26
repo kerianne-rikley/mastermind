@@ -2,7 +2,7 @@ import * as React from "react";
 import { StyleSheet, View } from "react-native";
 
 const colourMap = {
-  0: "#1e90ff",
+  0: "#316EFF", // "#1e90ff",
   1: "#ee82ee",
   2: "#dc143c",
   3: "#ff8c00",

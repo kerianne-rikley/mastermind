@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StyleSheet, View, Text, Button } from "react-native";
 
-const buttonColor = "#2F1867"
+const buttonColor = "#E70088"
 
 export default class HowToScreen extends React.Component {
   render() {
@@ -16,7 +16,7 @@ export default class HowToScreen extends React.Component {
           />
         </View>
         <Text style={styles.titleCard}>How To Play</Text>
-        <Text style={styles.textCard}>To play this game you will be given six colours and four positions. Your goal is to place the correct colour in each position. You will get 10 tries to crack the code. For each attempt you will be provided with feedback, indicating the how many colours are in the correct position, and how many colours are correct but in the incorrect position.</Text>
+        <Text style={styles.textCard}>To play this game you will be given six colours and four positions. Your goal is to place the correct colour in each position. You will get 10 tries to crack the code. For each attempt you will be provided with feedback. A small red box indicates the how many colours are in the correct position, a small white box indicates how many colours are correct but in the incorrect position, and a black box indicates the number of incorrect colours.</Text>
       </View>
     );
   }
@@ -27,13 +27,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 5,
-    backgroundColor: "#D0BCFC",
+    backgroundColor: "#EEEEEE",
     margin: 100
   },
   titleCard: {
     fontSize: 30,
     fontWeight: "bold",
-    padding: 15
+    padding: 15,
+    textAlign: "center"
   },
   textCard:{
     alignItems: "left",
@@ -42,7 +43,8 @@ const styles = StyleSheet.create({
   },
   buttonBox: {
     alignSelf: "flex-end",
-    width: 50,
+    width: 30,
+    height: 30,
     padding: 2,
   }
 });

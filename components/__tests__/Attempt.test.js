@@ -32,7 +32,7 @@ describe("<Attempt />", () => {
 
   describe("displaysChosenColor", () => {
     const colors = [
-      "#1e90ff",
+      "#316EFF", // "#1e90ff",
       "#ee82ee",
       "#dc143c",
       "#ff8c00",

@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button } from "react-native";
 import Entry from "../components/Entry";
 import Attempt from "../components/Attempt";
 
-const buttonColor = "#2F1867"
+const buttonColor = "#E70088" //"#2F1867"
 
 export default class GameScreen extends React.Component {
   choices = [0,1,2,3,4,5];
@@ -17,7 +17,7 @@ export default class GameScreen extends React.Component {
       solution: [Math.floor(Math.random() * 6),Math.floor(Math.random() * 6),Math.floor(Math.random() * 6),Math.floor(Math.random() * 6)],
       attempts: 0,
       isDisabled: false,
-      solved: false,
+      message: "",
     };
   }
 
@@ -45,6 +45,10 @@ export default class GameScreen extends React.Component {
         idxA.push(lastAttempt[index]);
         idxS.push(sol[index]);
       }
+    }
+
+    if (feedback.length==4) { //Check for win
+      this.setState({isDisabled: true, message:"YOU WIN!"})
     }
 
     while(iAttempts < idxA.length){ // Find and record 'partial match' (white)
@@ -87,7 +91,7 @@ export default class GameScreen extends React.Component {
       solution: [...newSolution],
       attempts: 0,
       isDisabled: false,
-      solved: false,
+      message: "Try Again",
     })
   }
   
@@ -95,6 +99,17 @@ export default class GameScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.container}>
+          <Text style={styles.importantText}>{this.state.message}</Text>
+          <Attempt code={this.state.codeHistory[9]} feedback={this.state.codeFeedback[9]} />
+          <Attempt code={this.state.codeHistory[8]} feedback={this.state.codeFeedback[8]} />
+          <Attempt code={this.state.codeHistory[7]} feedback={this.state.codeFeedback[7]} />
+          <Attempt code={this.state.codeHistory[6]} feedback={this.state.codeFeedback[6]} />
+          <Attempt code={this.state.codeHistory[5]} feedback={this.state.codeFeedback[5]} />
+          <Attempt code={this.state.codeHistory[4]} feedback={this.state.codeFeedback[4]} />
+          <Attempt code={this.state.codeHistory[3]} feedback={this.state.codeFeedback[3]} />
+          <Attempt code={this.state.codeHistory[2]} feedback={this.state.codeFeedback[2]} />
+          <Attempt code={this.state.codeHistory[1]} feedback={this.state.codeFeedback[1]} />
+          <Attempt code={this.state.codeHistory[0]} feedback={this.state.codeFeedback[0]} />
           <View style={styles.code}>
             <Entry id={0} choice={this.choices[this.state.currentChoices[0]]} handlePress={this.updateChoice} />
             <Entry id={1} choice={this.choices[this.state.currentChoices[1]]} handlePress={this.updateChoice} />
@@ -110,16 +125,6 @@ export default class GameScreen extends React.Component {
               />
             </View>
           </View>
-          <Attempt code={this.state.codeHistory[0]} feedback={this.state.codeFeedback[0]} />
-          <Attempt code={this.state.codeHistory[1]} feedback={this.state.codeFeedback[1]} />
-          <Attempt code={this.state.codeHistory[2]} feedback={this.state.codeFeedback[2]} />
-          <Attempt code={this.state.codeHistory[3]} feedback={this.state.codeFeedback[3]} />
-          <Attempt code={this.state.codeHistory[4]} feedback={this.state.codeFeedback[4]} />
-          <Attempt code={this.state.codeHistory[5]} feedback={this.state.codeFeedback[5]} />
-          <Attempt code={this.state.codeHistory[6]} feedback={this.state.codeFeedback[6]} />
-          <Attempt code={this.state.codeHistory[7]} feedback={this.state.codeFeedback[7]} />
-          <Attempt code={this.state.codeHistory[8]} feedback={this.state.codeFeedback[8]} />
-          <Attempt code={this.state.codeHistory[9]} feedback={this.state.codeFeedback[9]} />
           <View style={styles.code}>  
             <View style={styles.buttonBox2}>
               <Button
@@ -150,11 +155,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
-  titleCard: {
+  importantText: {
     fontSize: 30,
-    backgroundColor: "pink",
     fontWeight: "bold",
-    marginVertical: 10
+    color: "#FFFFFF",
+    margin: 10
   },
   code: {
     flexDirection: 'row',
