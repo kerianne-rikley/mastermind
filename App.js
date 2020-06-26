@@ -17,11 +17,13 @@ const AppContainer = createAppContainer(MainNavigator);
 export default class App extends React.Component {
   render() {
     return (
-      <ErrorBoundary>
-        <View style={styles.container}>
-          <AppContainer />
-        </View>
-      </ErrorBoundary>
+      <View style={[{flex: 1}]}>
+        <ErrorBoundary>
+          <View style={styles.container}>
+            <AppContainer />
+          </View>
+        </ErrorBoundary>
+      </View>
     );
   }
 }
@@ -29,7 +31,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#454545",
     alignItems: "center",
     justifyContent: "center"
   }

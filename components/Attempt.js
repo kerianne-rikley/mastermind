@@ -27,32 +27,25 @@ export default class Attempt extends React.Component {
     return (
       <View style={styles.code}>
         <View style={styles.code}>
-          <View id="history-0" style={{width: 20, height: 20, padding: 2, backgroundColor: c1 }} />
-          <View style={styles.spacer} />
-          <View id="history-1" style={{width: 20, height: 20, padding: 2, backgroundColor: c2 }} />
-          <View style={styles.spacer} />
-          <View id="history-2" style={{width: 20, height: 20, padding: 2, backgroundColor: c3 }} />
-          <View style={styles.spacer} />
-          <View id="history-3" style={{width: 20, height: 20, padding: 2, backgroundColor: c4 }} />
+          <View id="history-0" style={{width: 35, height: 35, backgroundColor: c1, margin: 3 }} />
+          <View id="history-1" style={{width: 35, height: 35, backgroundColor: c2, margin: 3 }} />
+          <View id="history-2" style={{width: 35, height: 35, backgroundColor: c3, margin: 3 }} />
+          <View id="history-3" style={{width: 35, height: 35, backgroundColor: c4, margin: 3 }} />
         </View>
-        <View style={{width: 6}} />
-        <View style={styles.code}>
-          <View id="feedback-0" style={{width: 20, height: 20, padding: 2, backgroundColor: r1 }} />
-          <View style={styles.spacer} />
-          <View id="feedback-1" style={{width: 20, height: 20, padding: 2, backgroundColor: r2 }} />
-          <View style={styles.spacer} />
-          <View id="feedback-2" style={{width: 20, height: 20, padding: 2, backgroundColor: r3 }} />
-          <View style={styles.spacer} />
-          <View id="feedback-3" style={{width: 20, height: 20, padding: 2, backgroundColor: r4 }} />
+        <View style={styles.grid}>
+          <View style={styles.pair}>
+            <View id="feedback-0" style={{width: 15, height: 15, backgroundColor: r1, margin: 2 }} />
+            <View id="feedback-1" style={{width: 15, height: 15, backgroundColor: r2, margin: 2 }} />
+          </View>
+          <View style={styles.pair}>
+            <View id="feedback-2" style={{width: 15, height: 15, backgroundColor: r3, margin: 2 }} />
+            <View id="feedback-3" style={{width: 15, height: 15, backgroundColor: r4, margin: 2 }} />
+          </View>
         </View>
       </View>
     );
   }
 }
-
-// React.propTypes = {
-//   id: PropTypes.number.isRequired
-// };
 
 const styles = StyleSheet.create({
   container: {
@@ -64,10 +57,16 @@ const styles = StyleSheet.create({
   code: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    padding: '20'
+    marginRight: 22,
   },
-  spacer: {
-    width: 3
+  pair: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  grid: {
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    marginLeft: 12.5,
+    marginVertical: 3,
+  },
   }
-
 });
