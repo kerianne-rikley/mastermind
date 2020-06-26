@@ -74,6 +74,9 @@ export default class GameScreen extends React.Component {
 
     if(this.state.attempts > 8){
       this.setState({isDisabled: true});
+      if (this.state.message==""){
+        this.setState({message: "Try Again"});
+      }
     }
   }
 
@@ -91,7 +94,7 @@ export default class GameScreen extends React.Component {
       solution: [...newSolution],
       attempts: 0,
       isDisabled: false,
-      message: "Try Again",
+      message: "",
     })
   }
   
