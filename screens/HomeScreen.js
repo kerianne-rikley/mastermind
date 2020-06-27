@@ -1,6 +1,8 @@
 import * as React from "react";
 import { StyleSheet, View, Text, Button } from "react-native";
 
+const buttonColor = "#E70088"
+
 export default class HomeScreen extends React.Component {
   render() {
     return (
@@ -10,14 +12,15 @@ export default class HomeScreen extends React.Component {
           <Button 
             testID="start-button"
             title="Start Game"
+            color = {buttonColor}
             onPress={() => this.props.navigation.navigate("Game")}
           />
         </View>
-        <View style={styles.spacer}/>
         <View style={styles.buttonBox}>
           <Button
             testID="how-to-button"
             title="How To Play"
+            color= {buttonColor}
             onPress={() => this.props.navigation.navigate("HowTo")}
           />
         </View>
@@ -29,18 +32,18 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    padding: 50
   },
   titleCard: {
+    color: "#FFFFFF",
     fontSize: 30,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    padding: 20
   },
   buttonBox: {
-    width: 120
-  },
-  spacer: {
-    height: 2
-  },
+    width: 120,
+    padding: 2
+  }
 });
