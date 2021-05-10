@@ -5,61 +5,128 @@ exports[`<HomeScreen /> renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#fff",
       "flex": 1,
       "justifyContent": "center",
+      "padding": 50,
     }
   }
 >
   <Text
     style={
       Object {
+        "color": "#FFFFFF",
         "fontSize": 30,
         "fontWeight": "bold",
+        "padding": 20,
       }
     }
   >
     Mastermind
   </Text>
   <View
-    accessibilityRole="button"
-    accessibilityStates={Array []}
-    accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "opacity": 1,
+        "padding": 2,
+        "width": 120,
       }
     }
-    testID="start-button"
   >
     <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
-        Array [
-          Object {},
-        ]
+        Object {
+          "opacity": 1,
+        }
       }
+      testID="start-button"
     >
-      <Text
+      <View
         style={
           Array [
-            Object {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "padding": 8,
-              "textAlign": "center",
-            },
+            Object {},
           ]
         }
       >
-        Start Game
-      </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#007AFF",
+                "fontSize": 18,
+                "padding": 8,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#E70088",
+              },
+            ]
+          }
+        >
+          Start Game
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "padding": 2,
+        "width": 120,
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      testID="how-to-button"
+    >
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#007AFF",
+                "fontSize": 18,
+                "padding": 8,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#E70088",
+              },
+            ]
+          }
+        >
+          How To Play
+        </Text>
+      </View>
     </View>
   </View>
 </View>

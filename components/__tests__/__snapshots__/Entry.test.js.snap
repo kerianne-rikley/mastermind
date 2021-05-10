@@ -4,10 +4,10 @@ exports[`<Entry /> renders correctly 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
-      "backgroundColor": "#fff",
-      "flex": 1,
-      "justifyContent": "center",
+      "height": 40,
+      "margin": 3,
+      "padding": 2,
+      "width": 40,
     }
   }
 >
@@ -45,7 +45,7 @@ exports[`<Entry /> renders correctly 1`] = `
               "textAlign": "center",
             },
             Object {
-              "color": "#1e90ff",
+              "color": "#316EFF",
             },
           ]
         }
